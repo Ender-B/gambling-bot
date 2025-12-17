@@ -6,7 +6,7 @@ app.use(express.json());
 
 const BOT_ID = "BOT_ID";
 
-
+let users = [];
 
 
 async function sendMessage(text) {
@@ -22,6 +22,11 @@ async function sendMessage(text) {
 
 app.post("/", async (req, res) => {
 
+const wins = 0;
+const username = req.body.name;
+const userID = req.body.user_id;
+let users = [[userID,username,wins]];
+  
   function getMessage(){
 
   const message = req.body.text;
@@ -35,15 +40,23 @@ app.post("/", async (req, res) => {
 num = Math.floor(Math.random() * 2);
   if(message.indexOf("!") == 0){
       if(message.includes("gamble")){
-          if(message.includes("heads")&& num == 1){
-              sendmessage("You Won");
-          } else if(message.includes("tails")&& num == 0){
-            sendmessage("You Won");
+          if((message.includes("heads")&& num == 1)||(message.includes("tails")&& num == 0)){
+              sendmessage("You Won"); 
+              for (let i = 0; i < users.length; i++) {
+                  if(users[i][0]==userID;){
+                      users[i][2] = users[i][2] + 1;
+                      sendmessage("Number of wins: " +users[i][2]);
+                  } else if(user.length-1 == i){
+                      
+                  }
+              }
           } else{
             sendmessage("you lost");
           }
-      } else{
-        sendmessage(" This is gambling bot, ");
+      }else if(message.includes("stats"){
+        
+      }else{
+        sendmessage(" This is gambling bot /nType !gamble then heads or tails to win. /nType !stats to see how many times you have won /nType !leaderboard to see the leaderboard");
       }
   }
   
