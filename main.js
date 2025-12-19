@@ -36,15 +36,15 @@ let users = [];
   return message;
 }
 
-  send = getMessage.toLowerCase();
+  send = getMessage().toLowerCase();
 num = Math.floor(Math.random() * 2);
   if(send.indexOf("!") == 0){
       if(send.includes("gamble")){
           if((send.includes("heads")&& num == 1)||(send.includes("tails")&& num == 0)){
               sendmessage("You Won"); 
-              for (let i = 0; i < users.length; i++) {
-                  if(users[i][0]==userID){
-                      users[i][2] = users[i][2] + 1;
+              for (let i = 1; i < users.length; i++) {
+                  if(users[i-1][0]==userID){
+                      users[i-1][2] = users[i][2] + 1;
                   } else if(user.length-1 == i){
                       users.push([userID,username,1]);
                   }
@@ -53,8 +53,8 @@ num = Math.floor(Math.random() * 2);
             sendmessage("you lost");
           }
       }else if(send.includes("stats")){
-            for (let i = 0; i < users.length; i++) {
-                  if(users[i][0]==userID){
+            for (let i = 1; i < users.length; i++) {
+                  if(users[i-1][0]==userID){
                       sendmessage("Number of wins: " +users[i][2]);
                   } else if(user.length-1 == i){
                       sendmessage("play a game first");
@@ -63,12 +63,12 @@ num = Math.floor(Math.random() * 2);
       }else if(send.includes("leaderboard")){
           newarr = [user[0]];
           for (let i = 0; i < users.length; i++){
-              if(users[i][0]==newarr[0][0]){
+              if(users[i-1][0]==newarr[0][0]){
                   ignoreThis = 1+1;
-              }else if(users[i][2]>newarr[0][2]){
-                newarr.unshift(users[i]);
+              }else if(users[i-1][2]>newarr[0][2]){
+                newarr.unshift(users[i-1]);
               }else{
-                newarr.push(users[i]);
+                newarr.push(users[i-1]);
               }
           }
         
