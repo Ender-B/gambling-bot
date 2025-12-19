@@ -29,18 +29,18 @@ let users = [];
   
   function getMessage(){
 
-  const message = req.body.text;
+  const send = req.body.text;
     if (req.body.sender_type === "bot") {
     return res.sendStatus(200);
   }
   return message;
 }
 
-  message = getMessage.toLowerCase();
+  send = getMessage.toLowerCase();
 num = Math.floor(Math.random() * 2);
-  if(message.indexOf("!") == 0){
-      if(message.includes("gamble")){
-          if((message.includes("heads")&& num == 1)||(message.includes("tails")&& num == 0)){
+  if(send.indexOf("!") == 0){
+      if(send.includes("gamble")){
+          if((send.includes("heads")&& num == 1)||(send.includes("tails")&& num == 0)){
               sendmessage("You Won"); 
               for (let i = 0; i < users.length; i++) {
                   if(users[i][0]==userID){
@@ -52,7 +52,7 @@ num = Math.floor(Math.random() * 2);
           } else{
             sendmessage("you lost");
           }
-      }else if(message.includes("stats")){
+      }else if(send.includes("stats")){
             for (let i = 0; i < users.length; i++) {
                   if(users[i][0]==userID){
                       sendmessage("Number of wins: " +users[i][2]);
@@ -60,7 +60,7 @@ num = Math.floor(Math.random() * 2);
                       sendmessage("play a game first");
                   }
             }
-      }else if(message.includes("leaderboard")){
+      }else if(send.includes("leaderboard")){
           newarr = [user[0]];
           for (let i = 0; i < users.length; i++){
               if(users[i][0]==newarr[0][0]){
