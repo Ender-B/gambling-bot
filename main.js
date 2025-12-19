@@ -54,7 +54,7 @@ num = Math.floor(Math.random() * 2);
           }
       }else if(message.includes("stats"){
             for (let i = 0; i < users.length; i++) {
-                  if(users[i][0]==userID;){
+                  if(users[i][0]==userID){
                       sendmessage("Number of wins: " +users[i][2]);
                   } else if(user.length-1 == i){
                       sendmessage("play a game first");
