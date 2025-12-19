@@ -25,7 +25,7 @@ app.post("/", async (req, res) => {
 const wins = 0;
 const username = req.body.name;
 const userID = req.body.user_id;
-let users = [[userID,username,wins]];
+let users = [];
   
   function getMessage(){
 
@@ -45,17 +45,35 @@ num = Math.floor(Math.random() * 2);
               for (let i = 0; i < users.length; i++) {
                   if(users[i][0]==userID;){
                       users[i][2] = users[i][2] + 1;
-                      sendmessage("Number of wins: " +users[i][2]);
                   } else if(user.length-1 == i){
-                      
+                      users.push([userID,username,1]);
                   }
               }
           } else{
             sendmessage("you lost");
           }
       }else if(message.includes("stats"){
+            for (let i = 0; i < users.length; i++) {
+                  if(users[i][0]==userID;){
+                      sendmessage("Number of wins: " +users[i][2]);
+                  } else if(user.length-1 == i){
+                      sendmessage("play a game first");
+                  }
+            }
+      }else if(message.includes("leaderboard"){
+          newarr = [user[0]];
+          for (let i = 0; i < users.length; i++){
+              if(users[i][0]==newarr[0][0];){
+                  ignoreThis = 1+1;
+              }else if(users[i][2]>newarr[0][2]){
+                newarr.unshift(users[i]);
+              }else{
+                newarr.push(users[i]);
+              }
+          }
         
-      }else{
+      }
+      else{
         sendmessage(" This is gambling bot /nType !gamble then heads or tails to win. /nType !stats to see how many times you have won /nType !leaderboard to see the leaderboard");
       }
   }
