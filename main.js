@@ -43,7 +43,7 @@ num = Math.floor(Math.random() * 2);
           if((message.includes("heads")&& num == 1)||(message.includes("tails")&& num == 0)){
               sendmessage("You Won"); 
               for (let i = 0; i < users.length; i++) {
-                  if(users[i][0]==userID;){
+                  if(users[i][0]==userID){
                       users[i][2] = users[i][2] + 1;
                   } else if(user.length-1 == i){
                       users.push([userID,username,1]);
@@ -63,7 +63,7 @@ num = Math.floor(Math.random() * 2);
       }else if(message.includes("leaderboard"){
           newarr = [user[0]];
           for (let i = 0; i < users.length; i++){
-              if(users[i][0]==newarr[0][0];){
+              if(users[i][0]==newarr[0][0]){
                   ignoreThis = 1+1;
               }else if(users[i][2]>newarr[0][2]){
                 newarr.unshift(users[i]);
