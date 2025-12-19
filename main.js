@@ -33,7 +33,7 @@ let users = [];
     if (req.body.sender_type === "bot") {
     return res.sendStatus(200);
   }
-  return message
+  return message;
 }
 
   message = getMessage.toLowerCase();
