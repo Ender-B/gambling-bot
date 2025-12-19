@@ -52,7 +52,7 @@ num = Math.floor(Math.random() * 2);
           } else{
             sendmessage("you lost");
           }
-      }else if(message.includes("stats"){
+      }else if(message.includes("stats")){
             for (let i = 0; i < users.length; i++) {
                   if(users[i][0]==userID){
                       sendmessage("Number of wins: " +users[i][2]);
@@ -60,7 +60,7 @@ num = Math.floor(Math.random() * 2);
                       sendmessage("play a game first");
                   }
             }
-      }else if(message.includes("leaderboard"){
+      }else if(message.includes("leaderboard")){
           newarr = [user[0]];
           for (let i = 0; i < users.length; i++){
               if(users[i][0]==newarr[0][0]){
