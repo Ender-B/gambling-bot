@@ -39,26 +39,43 @@ const userID = req.body.user_id;
 num = Math.floor(Math.random() * 2);
   if(send.indexOf("!") == 0){
       if(send.includes("gamble")){
-          if((send.includes("heads")&& num == 1)||(send.includes("tails")&& num == 0)){
-              sendMessage("You Won"); 
-              for (let i = 1; i < users.length; i++) {
-                  if(users[i-1][0]==userID){
-                      users[i-1][2] = users[i][2] + 1;
-                  } else if(users.length-1 == i){
-                      users.push([userID,username,1]);
+      let found = false;
+            for (let i = 0; i < users.length; i++) {
+                if (users[i][0] === userID) {
+                    found = true;
+            
+                    if ((send.includes("heads") && num === 1) ||(send.includes("tails") && num === 0))
+                    { 
+                      users[i][2]++;
+                      await sendMessage("You won!");
+                    } else {
+                      await sendMessage("You lost!");
+                    }
+                    break;
                   }
-              }
-          } else{
-            sendMessage("you lost");
+                }
+        if (!found) {
+          if ((send.includes("heads") && num === 1) ||(send.includes("tails") && num === 0)) {
+            users.push([userID, username, 1]);
+            await sendMessage("You won!");
+          } else {
+            users.push([userID, username, 0]);
+            await sendMessage("You lost!");
           }
-      }else if(send.includes("stats")){
-            for (let i = 1; i < users.length; i++) {
-                  if(users[i-1][0]==userID){
-                      sendMessage("Number of wins: " +users[i][2]);
-                  } else if(users.length-1 == i){
-                      sendMessage("play a game first");
-                  }
+        }
+      }}else if(send.includes("stats")){
+          let found = false;
+          for (let i = 0; i < users.length; i++) {
+            if (users[i][0] === userID) {
+              found = true;
+              await sendMessage("Number of wins: " + users[i][2]);
+              break;
             }
+          } 
+          if (!found) {
+            await sendMessage("Play a game first.");
+          }
+        }
       }else if(send.includes("leaderboard")){
           newarr = [user[0]];
           for (let i = 0; i < users.length; i++){
