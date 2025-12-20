@@ -29,7 +29,7 @@ let users = [];
   
   function getMessage(){
 
-  const send = req.body.text;
+  const message = req.body.text;
     if (req.body.sender_type === "bot") {
     return res.sendStatus(200);
   }
@@ -74,7 +74,7 @@ num = Math.floor(Math.random() * 2);
         
       }
       else{
-        sendmessage(" This is gambling bot /nType !gamble then heads or tails to win. /nType !stats to see how many times you have won /nType !leaderboard to see the leaderboard");
+        sendmessage(" This is gambling bot /nType !gamble then heads or tails to win. /nType !stats to see how many times you have won");
       }
   }
   
