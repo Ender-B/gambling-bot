@@ -17,7 +17,7 @@ async function sendMessage(text) {
       bot_id: BOT_ID,
       text: text
     })
-  };
+  });
 }
 
 app.post("/", async (req, res) => {
@@ -77,10 +77,10 @@ num = Math.floor(Math.random() * 2);
       }
   }
   
+res.sendStatus(200);
   
 });
 
-res.sendStatus(200);
 
 
 
