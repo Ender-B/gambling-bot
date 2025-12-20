@@ -41,7 +41,7 @@ num = Math.floor(Math.random() * 2);
   if(send.indexOf("!") == 0){
       if(send.includes("gamble")){
           if((send.includes("heads")&& num == 1)||(send.includes("tails")&& num == 0)){
-              sendmessage("You Won"); 
+              sendMessage("You Won"); 
               for (let i = 1; i < users.length; i++) {
                   if(users[i-1][0]==userID){
                       users[i-1][2] = users[i][2] + 1;
@@ -50,14 +50,14 @@ num = Math.floor(Math.random() * 2);
                   }
               }
           } else{
-            sendmessage("you lost");
+            sendMessage("you lost");
           }
       }else if(send.includes("stats")){
             for (let i = 1; i < users.length; i++) {
                   if(users[i-1][0]==userID){
-                      sendmessage("Number of wins: " +users[i][2]);
+                      sendMessage("Number of wins: " +users[i][2]);
                   } else if(user.length-1 == i){
-                      sendmessage("play a game first");
+                      sendMessage("play a game first");
                   }
             }
       }else if(send.includes("leaderboard")){
@@ -74,7 +74,7 @@ num = Math.floor(Math.random() * 2);
         
       }
       else{
-        sendmessage(" This is gambling bot /nType !gamble then heads or tails to win. /nType !stats to see how many times you have won");
+        sendMessage(" This is gambling bot /nType !gamble then heads or tails to win. /nType !stats to see how many times you have won");
       }
   }
   
