@@ -10,7 +10,7 @@ let users = [];
 
 
 async function sendMessage(text) {
-  await fetch("https://api.groupme.com/v3/bots/post"), {
+  await fetch("https://api.groupme.com/v3/bots/post", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -25,7 +25,6 @@ app.post("/", async (req, res) => {
 const wins = 0;
 const username = req.body.name;
 const userID = req.body.user_id;
-let users = [];
   
   function getMessage(){
 
@@ -45,7 +44,7 @@ num = Math.floor(Math.random() * 2);
               for (let i = 1; i < users.length; i++) {
                   if(users[i-1][0]==userID){
                       users[i-1][2] = users[i][2] + 1;
-                  } else if(user.length-1 == i){
+                  } else if(users.length-1 == i){
                       users.push([userID,username,1]);
                   }
               }
@@ -56,7 +55,7 @@ num = Math.floor(Math.random() * 2);
             for (let i = 1; i < users.length; i++) {
                   if(users[i-1][0]==userID){
                       sendMessage("Number of wins: " +users[i][2]);
-                  } else if(user.length-1 == i){
+                  } else if(users.length-1 == i){
                       sendMessage("play a game first");
                   }
             }
@@ -81,6 +80,7 @@ num = Math.floor(Math.random() * 2);
   
 });
 
+res.sendStatus(200);
 
 
 
