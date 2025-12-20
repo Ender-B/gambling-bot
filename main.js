@@ -75,8 +75,7 @@ num = Math.floor(Math.random() * 2);
           if (!found) {
             await sendMessage("Play a game first.");
           }
-        }
-      }else if(send.includes("leaderboard")){
+        }else if(send.includes("leaderboard")){
           newarr = [user[0]];
           for (let i = 0; i < users.length; i++){
               if(users[i-1][0]==newarr[0][0]){
@@ -92,7 +91,7 @@ num = Math.floor(Math.random() * 2);
       else{
         sendMessage(" This is gambling bot /nType !gamble then heads or tails to win. /nType !stats to see how many times you have won");
       }
-  }
+  
   
 res.sendStatus(200);
   
