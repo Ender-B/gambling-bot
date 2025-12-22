@@ -25,17 +25,14 @@ app.post("/", async (req, res) => {
   const wins = 0;
   const username = req.body.name;
   const userID = req.body.user_id;
-    
-    function getMessage(){
-  
+
     const message = req.body.text;
       if (req.body.sender_type === "bot") {
       return res.sendStatus(200);
     }
-    return message;
-  }
+
   
-    send = getMessage().toLowerCase();
+    send = message.toLowerCase();
   num = Math.floor(Math.random() * 2);
     if(send.indexOf("!") == 0){
         if(send.includes("gamble")){
