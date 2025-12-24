@@ -33,8 +33,8 @@ app.post("/", async (req, res) => {
 
   
     send = message.toLowerCase();
-  num = Math.floor(Math.random() * 2);
-    if(send.indexOf("!") <= 2){
+    num = Math.floor(Math.random() * 2);
+    if(send.starsWith("!"){
         if(send.includes("gamble")){
               let found = false;
                   for (let i = 0; i < users.length; i++) {
