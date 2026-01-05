@@ -77,13 +77,15 @@ app.post("/", async (req, res) => {
                     }
               }else if(send.includes("leaderboard")){
                   
-             await sendMessage(users.sort((a,b) => b.wins - a.wins));     
-              
+             users.sort((a,b) => b.wins - a.wins);     
+              for (let i = 0; i < users.length; i++) {
+                 await sendMessage((i+1) + ": " + users[i][1] + ". wins =" + users[i][2]);
+              }
              //await sendMessage("Srry, nothing here");
               
             }
             else{
-              sendMessage(" This is gambling bot \nType !gamble then heads or tails to win. \nType !stats to see how many times you have won. /nAnd type !leaderboard to see the leaderboard");
+              await sendMessage(" This is gambling bot \nType !gamble then heads or tails to win. \nType !stats to see how many times you have won. /nAnd type !leaderboard to see the leaderboard");
             }
         }
     
