@@ -7,6 +7,9 @@ app.use(express.json());
 const BOT_ID = "e0ed558beefb6cb64d2610ffe6";
 
 let users = [];
+/* user id
+username
+wins*/
 
 
 async function sendMessage(text) {
@@ -73,21 +76,14 @@ app.post("/", async (req, res) => {
                       await sendMessage("Play a game first.");
                     }
               }else if(send.includes("leaderboard")){
-                    /*newarr = [users[0]];
-                    for (let i = 0; i < users.length; i++){
-                        if(users[i][0]==newarr[0][0]){
-                            ignoreThis = 1+1;
-                        }else if(users[i][2]>newarr[0][2]){
-                          newarr.unshift(users[i]);
-                        }else{
-                          newarr.push(users[i]);
-                        }
-                    }*/
-             await sendMessage("Srry, nothing here");
+                  
+             await sendMessage(users.sort((a,b) => b.wins - a.wins));     
+              
+             //await sendMessage("Srry, nothing here");
               
             }
             else{
-              sendMessage(" This is gambling bot \nType !gamble then heads or tails to win. \nType !stats to see how many times you have won");
+              sendMessage(" This is gambling bot \nType !gamble then heads or tails to win. \nType !stats to see how many times you have won. /nAnd type !leaderboard to see the leaderboard");
             }
         }
     
