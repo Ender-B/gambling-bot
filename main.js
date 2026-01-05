@@ -4,7 +4,7 @@ const fetch = require("node-fetch");
 const app = express();
 app.use(express.json());
 
-const BOT_ID = "BOT_ID";
+const BOT_ID = "e0ed558beefb6cb64d2610ffe6";
 
 let users = [];
 
