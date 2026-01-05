@@ -87,7 +87,7 @@ app.post("/", async (req, res) => {
               
             }
             else{
-              sendMessage(" This is gambling bot /nType !gamble then heads or tails to win. /nType !stats to see how many times you have won");
+              sendMessage(" This is gambling bot \nType !gamble then heads or tails to win. \nType !stats to see how many times you have won");
             }
         }
     
