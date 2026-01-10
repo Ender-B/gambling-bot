@@ -14,6 +14,7 @@ wins*/
 
 function marco(){
   polo = !polo;
+  return polo
 }
 function minutes(miliseconds){
   seconds = miliseconds * 1000;
