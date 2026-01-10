@@ -1,6 +1,6 @@
 const express = require("express");
 const fetch = require("node-fetch");
-const polo = false
+ polo = false
 const app = express();
 
 app.use(express.json());
