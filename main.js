@@ -1,6 +1,5 @@
 const express = require("express");
 const fetch = require("node-fetch");
- polo = false
 const app = express();
 
 app.use(express.json());
@@ -12,16 +11,7 @@ let users = [];
 username
 wins*/
 
-function marco(){
-  polo = !polo;
-  return polo
-}
-function minutes(miliseconds){
-  seconds = miliseconds * 1000;
-  return seconds * 60
-}
 
-const timer = setTimeout(marco, minutes(14));
 
 async function sendMessage(text) {
   await fetch("https://api.groupme.com/v3/bots/post", {
@@ -32,7 +22,7 @@ async function sendMessage(text) {
       text: text
     })
   });
-  clearTimeout(timer);
+
 }
  
 app.post("/", async (req, res) => {
