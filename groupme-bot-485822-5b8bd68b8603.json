@@ -1,13 +1,1 @@
-{
-  "type": "service_account",
-  "project_id": "groupme-bot-485822",
-  "private_key_id": "5b8bd68b8603586e90928a03d2fe9630400225ee",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDL0GIQDuhv4aJK\nDZNEtpu3wP0lOzomsHoXaxGYzsq6CMRGGWZNod1bri4KAkC201l1zGB2UiJ+d29V\nQegmE1W1Jr9QEa/YDyj6gsTcsyfNeTnkr9aoMpstkS+1ToG4SkelNrlg8IcdAyJ2\npSYntBhWaXd8NRzIhAw/E3PnoR66JulxbrmKMqo53K+rf7e9+ddVtIcHEK81YiD7\nM3XIVjHAzWZlCN+CJajtRI50+OhRFgjvsF4jo5iumcgxSdS4ShkOj49D6Mt6LCiT\nuJtYFu2MA6EEihFrWf1+mmgPzHVFjukmlGXzMtM5TV+eu0MTJ9QJ/IMQZGx3nWPq\nmTqMJIVvAgMBAAECggEATyujpAw+cxNpOK3cSoFKrM7tJrTCinvb+VPQcpTFgA1e\nvMIqELbzJyVaYe3tGHex1QXuZJfUKV8Yorwmwv+Yt/UUtLQiI+IDr4fzk62OJQ1V\nlUVOs2hxCfrPVvTng+Bqwz0mNodIXNc2YHMXhq25FHwEe32gMC3HGgti5xOZvYIl\nidUv5Ssq297glDDk4KaRQYwu74slJfOBIHrvcR02hvsHrLlKgsxHYn3d400F+f3s\ndErKCo2BwvFaMb3aLZPNsJcf/HV+w+tPo9Fhrom1VLHDW94823RdJlrUVMc2FMnE\ns9Kze2SItQ4CwroHzZ5rIQrpcXr4J0CZtsXV5TH3bQKBgQDn9wzjgTe0ai0GsZBj\njjBu4Dx4HFTDdobPcIT2NZkcHwwXLJu3p0289D52mRzhwo3e1PoMJgJWXFLnCH59\n1p14tjB6TCKHcvuzw3qLNkA64Xr36Jst0FCeOcikFO7oC77tgNNDuJX2jDZciL81\nnttBRR4COFXCxxw/pr74lsNCgwKBgQDg7p3u7hrnGVgEiQgccilp00gi/cykXLqd\nntAlezDkiWD8ml3ttyBxkZXjzB9tkzbFniqeix8+ALtYsZxDXRTZTFyFmqBMEZYd\n2RtHhr3OQCu7lzai3ks1IxoXXjfSDxnnkd6lGfxoab9zlbABAi6CLAm77IWmGi9o\nMxBJZk4NpQKBgQDX+jLJ8RpIpUNfJBzoVQ/LbIVg4CAcDlPe+UkTZTw17sJ3IVWr\nXd8Hu/IcwtsdaORnQa2/efRbLIMUEdiUmirspdXlSNYtf2XULoH+9HhBWogAI1e5\nBGjLqcmi3MrEy4rt4DDUsR0P/eTvq3M9HbfPweb68jEHthQbP8o380fCuQKBgDKj\nRYber8vLFteeiebthIlAeYL3JDT0c0a81Bs8CpvImb8EeZTknzcyEU6BS6n9dF00\n6F9c7qGkxIiJI6a+s8zftgyV7PRzGRqLH+sQWHawV6gZuMEdzkyeJGeSXHq7z5ck\nbb05hmtzMxiwYDk55oKDq4VVEBl+16FbrZT4pSXJAoGALKdIHEmMk7b4+YGe92sT\ng18aM8BLLUi5lc4TR0EgvN2L2PgOtS4zO1GNbhZPgvJ5o58nEiGDctUc6S/86Od6\nYilx+Lk4gS4kpgDtgdcVicFKVsTrQ6aUT61kA93ks2gTvBDecF/GZ72vjg74OcBr\nEpRivg8Tu8Wgo2RYv+qRToQ=\n-----END PRIVATE KEY-----\n",
-  "client_email": "gambling-bot@groupme-bot-485822.iam.gserviceaccount.com",
-  "client_id": "113139215379878571981",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gambling-bot%40groupme-bot-485822.iam.gserviceaccount.com",
-  "universe_domain": "googleapis.com"
-}
+
