@@ -88,24 +88,22 @@ app.post("/", async (req, res) => {
             if (!found) {
               await sendMessage("Play a game first.");
             }
-        else if(send.includes("leaderboard")){
+      } else if(send.includes("leaderboard")){
               
-          users.sort((a,b) => b.wins - a.wins);     
+          users.sort((a,b) => b[2] - a[2]);     
           for (let i = 0; i < users.length; i++) {
              await sendMessage((i+1) + ": " + users[i][1] + ". wins =" + users[i][2]);
           }
          //await sendMessage("Srry, nothing here");
           
-        }
-        else{
+        } else{
           await sendMessage(" This is gambling bot \nType !gamble then heads or tails to win. \nType !stats to see how many times you have won. \nAnd type !leaderboard to see the leaderboard");
         }
     }
   
   
   res.sendStatus(200);
-  }
-});
+  });
 
 
 
