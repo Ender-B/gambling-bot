@@ -28,7 +28,7 @@ async function sendMessage(text) {
 }
  
 app.post("/", async (req, res) => {
-  
+  await sendMessage("running");
   const key = '/etc/secrets/pass.json'
   const auth = new google.auth.GoogleAuth({
     keyfile: key,
