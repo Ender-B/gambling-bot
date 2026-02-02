@@ -29,10 +29,10 @@ async function sendMessage(text) {
  
 app.post("/", async (req, res) => {
   
-  const key = 'process.env./pass.json'
+  const key = '/etc/secrets/pass.json'
   const auth = new google.auth.Googleauth({
     keyfile: key,
-    scopes: "https://www.googleapis.com/auth/spreadsheets,
+    scopes: "https://www.googleapis.com/auth/spreadsheets",
   });
   
   if (req.body.sender_type === "bot") {
