@@ -30,7 +30,7 @@ async function sendMessage(text) {
 app.post("/", async (req, res) => {
   
   const key = '/etc/secrets/pass.json'
-  const auth = new google.auth.Googleauth({
+  const auth = new google.auth.GoogleAuth({
     keyfile: key,
     scopes: "https://www.googleapis.com/auth/spreadsheets",
   });
@@ -40,7 +40,7 @@ app.post("/", async (req, res) => {
   }
 
   const client = await auth.getClient();
-  const sheet = google.sheets({version: "v4", auth, client});
+  const sheet = google.sheets({version: "v4", auth: client});
   
   const username = req.body.name;
   const userID = req.body.user_id;
