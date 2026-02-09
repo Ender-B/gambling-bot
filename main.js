@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.json());
 
-const BOT_ID = "process.env.BOT_ID";
+const BOT_ID = "e0ed558beefb6cb64d2610ffe6D";
 
 let users = [];
 /* user id
@@ -28,20 +28,13 @@ async function sendMessage(text) {
 }
  
 app.post("/", async (req, res) => {
-  await sendMessage("running");
-  const key = '/etc/secrets/pass.json'
-  const auth = new google.auth.GoogleAuth({
-    keyfile: key,
-    scopes: "https://www.googleapis.com/auth/spreadsheets",
-  });
+
   
   if (req.body.sender_type === "bot") {
       return res.sendStatus(200);
   }
 
-  const client = await auth.getClient();
-  const sheet = google.sheets({version: "v4", auth: client});
-  
+
   const username = req.body.name;
   const userID = req.body.user_id;
   const message = req.body.text;
